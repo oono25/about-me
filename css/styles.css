@@ -1,76 +1,189 @@
-
-.body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-.nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer {
-    text-align: center;
-    padding: 3rem;
-    background: #333;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-@media (max-width: 600px) {
-    .header, .footer {
-        padding: 1rem;
-    }
-
-    .nav ul li {
-        display: block;
-        margin: 0.5rem 0;
-    }
-}
-
-
-nav {
-  list-style: none;
-  background-color: #333;
-  padding: 0;
+/* 夜空の背景設定 */
+body.body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(#0b0c2a, #000814);
+  color: #fff;
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  transform: scale(1.1); /* 初期表示時に少し拡大 */
+  transform-origin: center center; /* 拡大の中心を画面中央に */
+  animation: zoomIn 2s ease-out; /* 画面読み込み時にズームインアニメーション */
+}
+
+/* ズームインアニメーション */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1); /* 初期サイズ */
+  }
+  100% {
+    transform: scale(1.1); /* 拡大後のサイズ */
+  }
+}
+
+/* 星が点在する背景 */
+.star-field {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, white 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: twinkle 100s linear infinite;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 流れ星アニメーション用 */
+.shooting-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shooting-stars::before,
+.shooting-stars::after,
+.shooting-stars .star-3 {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 100%;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(45deg, white, rgba(255, 255, 255, 0));
+  animation: shooting 6s ease-in-out infinite;
+}
+
+.shooting-stars::before {
+  animation-delay: 0s;
+}
+
+.shooting-stars::after {
+  animation-delay: 2s;
+  top: -20%;
+  left: 80%;
+}
+
+.shooting-stars .star-3 {
+  animation-delay: 4s;
+  top: -30%;
+  left: 60%;
+}
+
+@keyframes twinkle {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translate(0, 0) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-150vw, 150vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* ヘッダー */
+.header {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: rgba(0, 0, 50, 0.5);
+  border-bottom: 1px solid #446;
+  z-index: 10;
+  position: relative;
+}
+
+.header h1 {
+  color: #aaccff;
+  font-size: 2.5rem;
+}
+
+/* ナビゲーション */
+.nav {
   display: flex;
   justify-content: center;
-}
-
-.nav li {
-  margin: 0;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
 }
 
 .nav a {
-  display: block;
-  padding: 15px 20px;
-  color: white;
+  color: #bbddff;
   text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .nav a:hover {
-  background-color: #555;
-}.
+  color: #ffffff;
+  text-shadow: 0 0 5px #aaddff;
+}
+
+/* セクション */
+section {
+  background-color: rgba(0, 0, 30, 0.6);
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(200, 200, 255, 0.2);
+}
+
+/* フッター */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(10, 10, 30, 0.7);
+  font-size: 0.8rem;
+  color: #aaa;
+  position: relative;
+  z-index: 10;
+}
+
+/* プロフィール全体を横並びに */
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* スマホで縦並びに */
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+/* プロフィール画像 */
+.profile-image {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* テキスト側 */
+.profile-text {
+  max-width: 500px;
+  color: #fff;
+}
+
+/* セクション全体の背景など */
+.profile-section {
+  padding: 40px 20px;
+  background-color: rgba(20, 20, 60, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(100, 100, 200, 0.2);
+}

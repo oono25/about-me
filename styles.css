@@ -1,0 +1,237 @@
+/* --------------------------------------------------------------
+  全体のスタイル
+-------------------------------------------------------------- */
+
+/* リセットスタイル：すべての要素に余白とパディングをリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* bodyの基本設定 */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* コンテナの最大幅とセンタリング */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+/* --------------------------------------------------------------
+  ヘッダー
+-------------------------------------------------------------- */
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+/* --------------------------------------------------------------
+  セクション：趣味
+-------------------------------------------------------------- */
+
+#hobbies {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#hobbies h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#hobbies ul {
+  list-style-type: none;
+}
+
+#hobbies ul li {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+#hobbies ul li a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+#hobbies ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/* --------------------------------------------------------------
+  作者画像
+-------------------------------------------------------------- */
+
+/* 作者の画像スタイル */
+.author-image {
+  width: 100px; /* 画像の幅 */
+  height: 100px; /* 画像の高さ */
+  border-radius: 50%; /* 丸い画像 */
+  margin-left: 10px; /* 画像とテキストの間に余白 */
+  margin-bottom: 10px; /* 画像の下に余白 */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* 画像に影をつける */
+}
+
+/* 画像にマウスオーバーした時の拡大アニメーション */
+.author-image:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+
+/* --------------------------------------------------------------
+  フッター
+-------------------------------------------------------------- */
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* --------------------------------------------------------------
+  リンク
+-------------------------------------------------------------- */
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* --------------------------------------------------------------
+  レスポンシブデザイン
+-------------------------------------------------------------- */
+
+/* スマートフォンやタブレット向けのレイアウト調整 */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  #hobbies h2 {
+    font-size: 20px;
+  }
+
+  #hobbies ul li {
+    font-size: 16px;
+  }
+}
+
+/* --------------------------------------------------------------
+  作者画像のスタイル（大きくして目立たせる）
+-------------------------------------------------------------- */
+
+/* 作者画像のスタイル */
+.author-image {
+  width: 150px; /* 画像の幅を150pxに拡大 */
+  height: 150px; /* 画像の高さを150pxに拡大 */
+  object-fit: cover; /* 画像のアスペクト比を維持しつつ、枠に収める */
+  object-position: top; /* 画像の上部を表示 */
+  
+  border-radius: 50%; /* 丸い画像 */
+  margin-left: 20px; /* 画像とテキストの間に余白を追加 */
+  margin-bottom: 20px; /* 画像の下に余白を追加 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* 画像に強めの影を追加して立体感を強調 */
+  border: 4px solid #fff; /* 画像に白い枠を追加して目立たせる */
+}
+
+/* 画像にマウスオーバーした時の拡大アニメーション */
+.author-image:hover {
+  transform: scale(1.2); /* ホバー時に画像が少し拡大 */
+  transition: transform 0.3s ease; /* 拡大のアニメーション */
+}
+
+/* --------------------------------------------------------------
+  作者画像のテキストの配置
+-------------------------------------------------------------- */
+
+/* 画像とテキストが一列に並ぶように調整 */
+.author-info {
+  display: flex;
+  align-items: center; /* 画像とテキストを縦に中央揃え */
+  margin-bottom: 20px; /* 画像とテキストの間に余白 */
+}
+
+.author-info h3 {
+  margin-left: 20px; /* 画像とテキストの間に少しスペースを追加 */
+  font-size: 22px; /* テキストを少し大きく */
+  color: #333; /* 文字色を調整 */
+}
+
+
+.home-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #2980b9;
+}
+
+.home-button-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #333; /* 見やすい濃いオレンジ色 */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: #e64a19; /* hover時に少し暗くしてわかりやすく */
+  transform: scale(1.05);
+}
