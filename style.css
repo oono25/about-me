@@ -181,7 +181,7 @@ p {
 }
 
 .home-button:focus {
-  outline: 3px solid #fcd34d; /* フォーカスリング（黄） */
+  outline: 3px solid #07b1e4; /* フォーカスリング（黄） */
   outline-offset: 3px;
 }
 
