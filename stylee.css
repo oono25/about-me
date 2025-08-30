@@ -1,0 +1,163 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 成分表セクション */
+.profile-composition h2 {
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.composition-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.composition-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.label {
+  width: 80px;
+  font-weight: bold;
+}
+
+.bar {
+  height: 20px;
+  border-radius: 10px;
+  background-color: #ddd;
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.bar::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.curiosity::after { width: 30%; background-color: #FF9800; }
+.effort::after    { width: 10%; background-color: #2196F3; }
+.humor::after     { width: 10%; background-color: #9C27B0; }
+.focus::after     { width: 20%; background-color: #4CAF50; }
+.laziness::after  { width: 30%; background-color: #607D8B; }
+
+.percent {
+  width: 40px;
+  text-align: right;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* こだわりベスト3 */
+.my-values h2 {
+  color: #ff9800;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.my-values ol {
+  padding-left: 20px;
+}
+
+.my-values li {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+/* 自分を色で表すと */
+.my-colors h2 {
+  color: #2196f3;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+.color-box {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.color-box.blue    { background-color: #1976d2; }
+.color-box.orange  { background-color: #fb8c00; }
+.color-box.gray    { background-color: #757575; }
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ddd;
+}
+
+
+
+
+.home-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #2980b9;
+}
+
+.home-button-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #333; /* 見やすい濃いオレンジ色 */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: #e64a19; /* hover時に少し暗くしてわかりやすく */
+  transform: scale(1.05);
+}
