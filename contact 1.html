@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お問い合わせ</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <div class="contact-form">
+    <h1>お問い合わせ</h1>
+    <form action="submit.php" method="POST">
+      <label for="name">お名前</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">メールアドレス</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">お問い合わせ内容</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">送信</button>
+    </form>
+    <div class="home-button-container">
+      <a href="index.html" class="home-button">ホームに戻る</a>
+    </div>
+  </div>
+</body>
+</html>

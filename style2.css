@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  color: white;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* 星のアニメーション背景 */
+body::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow:
+    50px 100px white,
+    150px 200px white,
+    250px 300px white,
+    350px 400px white,
+    450px 500px white,
+    550px 600px white,
+    650px 700px white,
+    750px 800px white;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.2; }
+}
+
+.contact-form {
+  position: relative;
+  max-width: 600px;
+  margin: 80px auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.contact-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1469df;
+  text-shadow: 0 0 5px #1469df;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #1469df;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #1469df;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ccc;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color:　#1469df;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #1469df;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #1469df;
+}
+
+
+
+.home-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #333; /* 見やすい濃いオレンジ色 */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  background: linear-gradient(135deg, #2a3d5d, #4a76a8); /* 星のようなグラデーション */
+}
+
+.home-button:hover {
+  background-color: #ff9800; /* オレンジの星をイメージ */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.home-button-container {
+  text-align: center;
+  margin-top: 40px;
+}
