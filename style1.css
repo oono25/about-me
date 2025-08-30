@@ -7,39 +7,47 @@
 
 /* ボディと全体のスタイル */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  background: radial-gradient(circle, #0d0d0d 0%, #1c2b42 100%); /* 夜空のようなグラデーション */
+  color: #e6e6e6;
 }
 
 /* ヘッダー */
 header {
-  background-color: #3498db;
+  background-color: #1e3a5b; /* 深い青 */
   color: white;
   padding: 40px 0;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* 星の輝き */
 }
 
 header p {
   font-size: 1.2rem;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
 /* ゲーム紹介セクション */
 .games {
   padding: 40px 20px;
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒で星空感を強調 */
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 .games h2 {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 30px;
+  color: #ffeb3b; /* 星のような黄色 */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
 /* ゲームカード全体 */
@@ -53,18 +61,20 @@ header p {
 /* ゲームカード個別 */
 .game-card {
   background-color: #ecf0f1;
-  border-radius: 8px;
+  border-radius: 12px;
   flex: 1 1 calc(33.333% - 20px); /* PCでは3列表示 */
   max-width: 300px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  background: linear-gradient(135deg, #ffffff, #f0f4f7); /* 星のような淡いグラデーション */
 }
 
 .game-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
 }
 
 .game-image {
@@ -73,11 +83,13 @@ header p {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .game-card h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: #34495e; /* ダークな色でコントラスト */
 }
 
 .game-card p {
@@ -89,9 +101,10 @@ header p {
 /* 説明文スタイル */
 .game-description {
   font-size: 1.1rem;
-  color: #555;
+  color: #fff;
   text-align: center;
   margin: 30px 20px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 /* ホームボタン */
@@ -102,17 +115,21 @@ header p {
 }
 
 .home-button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #3498db;
   color: #ffffff;
   font-size: 16px;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #4e77f4, #3498db); /* 星空のような青 */
 }
 
 .home-button:hover {
   background-color: #2980b9;
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* フッター */
@@ -121,6 +138,7 @@ footer {
   color: #ecf0f1;
   padding: 20px 0;
   text-align: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
 }
 
 footer p {
@@ -140,4 +158,18 @@ footer p {
     flex: 1 1 100%; /* スマホは1列 */
     max-width: 90%;
   }
+}
+
+/* 星がきらめくアニメーション */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.game-card:hover {
+  animation: twinkle 1.5s ease-in-out infinite;
 }

@@ -1,30 +1,39 @@
+/* ================================
+   星空テーマのCSS
+   ================================ */
+
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #0d0d0d; /* 深い夜空の背景 */
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #e6e6e6; /* 明るい文字 */
+  background: radial-gradient(circle, #000 0%, #2c3e50 100%); /* 夜空のグラデーション */
 }
 
+/* ヘッダー */
 header {
-  background-color: #4CAF50;
+  background-color: #1e2a47; /* 星を想像させる深い青 */
   color: white;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* 暗い光沢のあるボックスシャドウ */
 }
 
+/* セクション */
 section {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1); /* 透明感を出す */
   margin: 20px;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2); /* 星のきらめきをイメージ */
 }
 
 /* 成分表セクション */
 .profile-composition h2 {
-  color: #4CAF50;
+  color: #FFEB3B; /* 太陽のような明るい黄色 */
   margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 星の輝き */
 }
 
 .composition-list {
@@ -47,10 +56,11 @@ section {
 .bar {
   height: 20px;
   border-radius: 10px;
-  background-color: #ddd;
+  background-color: #444; /* 星の輝きのための背景 */
   position: relative;
   flex-grow: 1;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .bar::after {
@@ -62,24 +72,25 @@ section {
   border-radius: 10px;
 }
 
-.curiosity::after { width: 30%; background-color: #FF9800; }
-.effort::after    { width: 10%; background-color: #2196F3; }
-.humor::after     { width: 10%; background-color: #9C27B0; }
-.focus::after     { width: 20%; background-color: #4CAF50; }
-.laziness::after  { width: 30%; background-color: #607D8B; }
-
+.curiosity::after { width: 30%; background-color: #FF9800; } /* 星のようにオレンジ */
+.effort::after    { width: 10%; background-color: #2196F3; } /* 深い青 */
+.humor::after     { width: 10%; background-color: #9C27B0; } /* 紫の星 */
+.focus::after     { width: 20%; background-color: #4CAF50; } /* 緑の星 */
+.laziness::after  { width: 30%; background-color: #607D8B; } /* 霧のような青 */
+  
 .percent {
   width: 40px;
   text-align: right;
   font-size: 0.9em;
-  color: #555;
+  color: #ccc;
 }
 
 /* こだわりベスト3 */
 .my-values h2 {
-  color: #ff9800;
+  color: #FFEB3B;
   font-size: 1.4em;
   margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 星の輝き */
 }
 
 .my-values ol {
@@ -93,9 +104,10 @@ section {
 
 /* 自分を色で表すと */
 .my-colors h2 {
-  color: #2196f3;
+  color: #2196F3;
   font-size: 1.4em;
   margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* 星のきらめき */
 }
 
 .color-box {
@@ -104,44 +116,28 @@ section {
   border-radius: 8px;
   font-weight: bold;
   color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 .color-box.blue    { background-color: #1976d2; }
 .color-box.orange  { background-color: #fb8c00; }
 .color-box.gray    { background-color: #757575; }
 
+/* フッター */
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #ddd;
+  background-color: #333;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  font-size: 0.9em;
+  background: radial-gradient(circle, #111, #333);
 }
 
-
-
-
+/* ホームボタン */
 .home-button-container {
   text-align: center;
   margin-top: 30px;
-}
-
-.home-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #3498db;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.home-button:hover {
-  background-color: #2980b9;
-}
-
-.home-button-container {
-  text-align: center;
-  margin-top: 40px;
 }
 
 .home-button {
@@ -153,11 +149,28 @@ footer {
   font-size: 18px;
   font-weight: bold;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  background: linear-gradient(135deg, #2a3d5d, #4a76a8); /* 星のようなグラデーション */
 }
 
 .home-button:hover {
-  background-color: #e64a19; /* hover時に少し暗くしてわかりやすく */
+  background-color: #ff9800; /* オレンジの星をイメージ */
   transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.home-button-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* アニメーション効果（星が輝く） */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.home-button {
+  animation: twinkle 1.5s infinite ease-in-out;
 }
