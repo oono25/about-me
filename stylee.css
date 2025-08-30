@@ -31,7 +31,7 @@ section {
 
 /* 成分表セクション */
 .profile-composition h2 {
-  color: #FFEB3B; /* 太陽のような明るい黄色 */
+  color: #2a9dae; /* 太陽のような明るい黄色 */
   margin-bottom: 15px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 星の輝き */
 }
@@ -87,7 +87,7 @@ section {
 
 /* こだわりベスト3 */
 .my-values h2 {
-  color: #FFEB3B;
+  color: #36cfd1;
   font-size: 1.4em;
   margin-bottom: 10px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 星の輝き */

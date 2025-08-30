@@ -1,4 +1,4 @@
-/* 基本のリセット */
+
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +46,7 @@ header p {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 30px;
-  color: #ffeb3b; /* 星のような黄色 */
+  color: #1875cb; /* 星のような黄色 */
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
