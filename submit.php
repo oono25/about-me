@@ -11,7 +11,7 @@ if (empty($name) || empty($email) || empty($message)) {
 }
 
 // メール送信（例）
-$to = ""; // 管理者のメールアドレス
+$to = "a47779268@gmail.com"; // 管理者のメールアドレス
 $subject = "お問い合わせがありました";
 $body = "名前: $name\nメール: $email\n内容:\n$message";
 $headers = "From: $email";
