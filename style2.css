@@ -8,7 +8,6 @@ body {
   height: 100vh;
 }
 
-/* 星のアニメーション背景 */
 body::before {
   content: '';
   position: absolute;
@@ -121,4 +120,50 @@ body::before {
 .home-button-container {
   text-align: center;
   margin-top: 40px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .contact-form {
+    margin: 40px 20px;
+    padding: 20px;
+  }
+
+  .contact-form h1 {
+    font-size: 24px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .home-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .home-button-container {
+    margin-top: 20px;
+  }
+
+  body::before {
+    box-shadow:
+      20px 40px white,
+      60px 80px white,
+      100px 120px white,
+      140px 160px white,
+      180px 200px white,
+      220px 240px white,
+      260px 280px white,
+      300px 320px white;
+  }
 }
