@@ -148,7 +148,7 @@ footer p {
 /* レスポンシブ */
 @media (max-width: 1024px) {
   .game-card {
-    flex: 1 1 calc(50% - 20px); /* タブレット・小型PCは2列 */
+    flex: 1 1 calc(50% - 20px); 
     max-width: 45%;
   }
 }
@@ -160,7 +160,6 @@ footer p {
   }
 }
 
-/* 星がきらめくアニメーション */
 @keyframes twinkle {
   0%, 100% {
     opacity: 0.8;
