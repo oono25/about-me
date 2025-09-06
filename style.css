@@ -1,9 +1,4 @@
-/* ================================
-   星空プロフィール用 CSS
-   対応HTML: 提示されたプロフィールページ
-   ================================ */
 
-/* リセットとベース */
 *,
 *::before,
 *::after {
@@ -16,7 +11,6 @@ html, body {
   min-height: 100%;
 }
 
-/* 夜空の背景（グラデ＋星の点滅アニメ） */
 body {
   font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Yu Gothic UI", "YuGothic", "Meiryo", sans-serif;
   line-height: 1.7;
@@ -25,12 +19,11 @@ body {
   overflow-x: hidden;
 }
 
-/* 星層（2レイヤーでパララックス風に） */
 body::before,
 body::after {
   content: "";
   position: fixed;
-  inset: -2000px; /* 画面外まで広げてスクロールでも埋まるように */
+  inset: -2000px; 
   background-repeat: repeat;
   background-size: 2000px 2000px;
   pointer-events: none;
@@ -38,7 +31,6 @@ body::after {
   opacity: 0.8;
 }
 
-/* 小さめの星（多数） */
 body::before {
   background-image:
     radial-gradient(1px 1px at 10% 20%, #ffffff 80%, transparent 81%),
@@ -52,7 +44,6 @@ body::before {
   animation: twinkle 6s linear infinite;
 }
 
-/* きらめきの強い星（少なめ＋ふわっと移動） */
 body::after {
   background-image:
     radial-gradient(2px 2px at 25% 15%, #ffffff 90%, transparent 91%),
@@ -91,7 +82,6 @@ main {
   box-shadow: 0 20px 50px rgba(0,0,0,0.45);
 }
 
-/* 見出し */
 h1, h2 {
   margin: 0 0 0.6em;
   line-height: 1.25;
@@ -109,13 +99,11 @@ h2 {
   color: #dbe6ff;
 }
 
-/* 段落 */
 p {
   margin: 0 0 1em;
   color: #e6ecff;
 }
 
-/* 画像コンテナ（横並び→レスポンシブ） */
 .image-container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -234,7 +222,6 @@ a:hover {
   }
 }
 
-/* 印刷時（背景は白っぽく、文字は黒に） */
 @media print {
   body {
     background: #ffffff !important;
